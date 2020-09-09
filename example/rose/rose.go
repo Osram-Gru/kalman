@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/konimarti/kalman"
+	"github.com/Osram-Gru/kalman"
 	"github.com/konimarti/lti"
 	"gonum.org/v1/gonum/mat"
 )
