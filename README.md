@@ -1,12 +1,16 @@
 # Adaptive Kalman filtering in Golang
 
-[![License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/konimarti/kalman/blob/master/LICENSE)
-[![GoDoc](https://godoc.org/github.com/konimarti/observer?status.svg)](https://godoc.org/github.com/konimarti/kalman)
-[![goreportcard](https://goreportcard.com/badge/github.com/konimarti/observer)](https://goreportcard.com/report/github.com/konimarti/kalman)
+[![License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/Osram-Gru/kalman/blob/master/LICENSE)
+[![GoDoc](https://godoc.org/github.com/konimarti/observer?status.svg)](https://godoc.org/github.com/Osram-Gru/kalman)
+[![goreportcard](https://goreportcard.com/badge/github.com/konimarti/observer)](https://goreportcard.com/report/github.com/Osram-Gru/kalman)
 
-```go get github.com/konimarti/kalman```
+```go get github.com/Osram-Gru/kalman```
 
-* Adaptive Kalman filtering with Rapid Ongoing Stochastic covariance Estimation (ROSE) 
+# Fork of github.com/konimarti/kalman
+
+The fork was necessary because konimarti/kalman fails to compile since gonum v0.8.1 introduced API breaking changes.
+
+* Adaptive Kalman filtering with Rapid Ongoing Stochastic covariance Estimation (ROSE)
 
 * A helpful introduction to how Kalman filters work, can be found [here](https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/).
 
@@ -14,12 +18,12 @@
 
 	The next state is defined as
 	```math
-	 x(t+1) = A_d * x(t) + B_d * u(t) 
+	 x(t+1) = A_d * x(t) + B_d * u(t)
 	```
-	 where A_d is the discretized prediction matrix and B_d the control matrix. 
-	 x(t) is the current state and u(t) the external input. The response (measurement) of the system is y(t):	 
+	 where A_d is the discretized prediction matrix and B_d the control matrix.
+	 x(t) is the current state and u(t) the external input. The response (measurement) of the system is y(t):
 	```math
-	 y(t)  = C * x(t) + D * u(t) 
+	 y(t)  = C * x(t) + D * u(t)
 	```
 
 ## Using the standard Kalman filter
@@ -79,8 +83,8 @@ See example [here](example/rose/rose.go).
 	^x(k+1) = Ad * ~x(k) + Bd * u(k)
 	^P(k+1) = Ad * ~P(k) * Ad^T + Gd * Q(k) * Gd^T
 	```
-  
-  
+
+
 
 ## Credits
 
